@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Haider ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#ffeef2;font-family:sans-serif;text-align:center}
+.page{display:none;min-height:100vh;padding:70px 20px 30px;flex-direction:column;align-items:center;justify-content:center}
+.page.active{display:flex;animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:center;gap:4px;padding:10px;background:#ffeef2;z-index:99}
+.nav span{font-size:10px;padding:4px 8px;border-radius:20px;background:#fff;border:1px solid #ffd0d9}
+.nav span.active{background:#8b1e3a;color:#fff}
+h1{font-family:serif;font-size:32px;color:#3a1220;line-height:1.1}
+.sub{font-size:13px;opacity:.7;margin:10px 0;line-height:1.5}
+.btn{background:#8b1e3a;color:#fff;border:none;padding:12px 28px;border-radius:30px;margin-top:18px;cursor:pointer;box-shadow:0 5px 15px rgba(139,30,58,.3)}
+.heart{font-size:55px;animation:beat 1s infinite}
+@keyframes beat{50%{transform:scale(1.15)}}
+.loader{width:220px;height:6px;background:#ffd0d9;border-radius:10px;overflow:hidden;margin-top:15px}
+.bar{height:100%;background:#8b1e3a;width:0%;transition:.2s}
+.card{background:#fff;border-radius:18px;padding:20px;max-width:350px;width:100%;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-top:15px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-size:12px;margin:12px 0}
+.day{padding:7px;border-radius:50%}
+.mark{background:#8b1e3a;color:#fff;font-weight:bold;transform:scale(1.15)}
+.wish{background:#fff8f9;border:1px solid #ffe0e6;padding:12px;border-radius:12px;margin:7px 0;text-align:left;font-size:13px;max-width:350px;width:100%}
+.env{width:300px;height:190px;background:#8b1e3a;border-radius:8px;position:relative;cursor:pointer;margin-top:15px}
+.paper{position:absolute;left:8px;right:8px;top:8px;bottom:8px;background:#fffdf7;padding:16px;font-family:serif;text-align:left;font-size:14px;line-height:1.6;overflow:auto;transition:.5s}
+.balloon{width:70px;height:88px;border-radius:50% / 60% 60% 40% 40%;margin:8px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-size:28px;transition:.3s}
+</style>
+</head>
+<body>
+<div class="nav"><span id="s0" class="active">00</span><span id="s1">01</span><span id="s2">02</span><span id="s3">03</span><span id="s4">04</span><span id="s5">05</span><span id="s6">06</span><span id="s7">07</span></div>
+
+<div class="page active" id="p0">
+<div class="heart">❤️</div>
+<h1>Preparing something<br>special for you.</h1>
+<p class="sub" id="lt">Just a little surprise..</p>
+<div class="loader"><div class="bar" id="bar"></div></div>
+<p class="sub" id="pc">0%</p>
+</div>
+
+<div class="page" id="p1">
+<div style="font-size:50px">💌</div>
+<p class="sub" style="letter-spacing:2px">FOR HAIDER - 18 SEP 2001</p>
+<h1>It's Your<br>Special Day</h1>
+<p class="sub">Today isn't just another day...<br>It's worth celebrating because aap hain.</p>
+<button class="btn" onclick="go(2)">Begin →</button>
+</div>
+
+<div class="page" id="p2">
+<h1>Mark It Forever</h1>
+<div class="card">
+<div style="font-weight:700">SEPTEMBER 2001</div>
+<div class="cal" id="cal"></div>
+<div style="font-family:serif;font-size:26px;font-style:italic;color:#8b1e3a;margin-top:8px">18 . 09 . 2001</div>
+<p class="sub">Save this date forever ❤️</p>
+</div>
+<button class="btn" onclick="go(3)">Next →</button>
+</div>
+
+<div class="page" id="p3">
+<h1>Wishes For You ❤️</h1>
+<p class="sub">Because aap deserve karte hain more than one wish</p>
+<div class="wish">❤️ Aapki muskurahat h
